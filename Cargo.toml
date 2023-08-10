@@ -1,7 +1,12 @@
 [package]
 name = "frontend-environment"
+description = "Inject \"environment variables\" for frontend applications by injecting a script tag into HTML"
 version = "0.1.0"
 edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["Maximilian Goisser <goisser94@gmail.com>"]
+keywords = ["environment", "frontend", "rewrite", "axum"]
+repository = "https://github.com/hobofan-toolbox/frontend-environment"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [features]
