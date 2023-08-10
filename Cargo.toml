@@ -1,0 +1,22 @@
+[package]
+name = "frontend-environment"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+default = ["axum"]
+axum = [
+    "dep:axum",
+    "dep:http-body",
+    "dep:tower",
+    "dep:tower-http",
+]
+
+[dependencies]
+lol_html = "1.0.1"
+
+tower = { version = "0.4.13", features = ["util"], optional = true }
+axum = { version = "0.6.18", features = ["headers"], optional = true }
+tower-http = { version = "0.4.0", features = ["fs", "trace", "cors", "auth", "add-extension"], optional = true }
+http-body = { version = "0.4.5", optional = true }
